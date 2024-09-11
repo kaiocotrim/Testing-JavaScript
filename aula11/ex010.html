@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>detran</title>
+</head>
+<body>
+    <h1>Teste de velocidade</h1>
+    Digite sua velocidade : <input type="number" name="vlc" id="vlc"> KM/H
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+
+
+    </p>
+    <script>
+        function calcular(){
+            var vlc1 = window.document.querySelector("input#vlc");
+            var res = window.document.querySelector("div#res");
+            var vel = Number(vlc1.value);
+            res.innerHTML = (`<p>Sua velocidade foi de <strong>${vel}<strong> Km/H <p>`);
+            if (vel > 60) {
+                res.innerHTML += (`Voce estava á <strong>${vel} Km/H. MULTADO ! <strong>`)
+            }
+                    
+            res.innerHTML += (`Dirija sempre com o sinto de segurança`);
+        
+            
+        }
+
+    </script>
+</body>
+</html>
